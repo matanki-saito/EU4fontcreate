@@ -2,7 +2,7 @@
 
 ## 準備
  - Javaが起動する環境。JREをインストールすればOK。
- - この[リンク](https://drive.google.com/open?id=112maCnY2MLkfTnikqCP93bjzoSz7wiDM)からrunnable-hiero.jarをダウンロードしておく。
+ - この[リンク](https://drive.google.com/file/d/1C09fpZbIkMr6G2zN5a9IHHN-h5T70Pu7/view?usp=sharing)からrunnable-hiero.jarをダウンロードしておく。
  - この[リンク](http://ch.nicovideo.jp/sevrunear/blomaga/ar539518)からNvcompressFrontEndをダウンロードしてzip解凍しておく。
 
 ## フォントfntとテクスチャpng画像の生成
