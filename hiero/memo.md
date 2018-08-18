@@ -6,7 +6,7 @@
  - この[リンク](http://ch.nicovideo.jp/sevrunear/blomaga/ar539518)からNvcompressFrontEndをダウンロードしてzip解凍しておく。
 
 ## フォントfntとテクスチャpng画像の生成
-runnable-hiero.jarをダブルクリックして、起動したHieroからYuMincho60bold.hieroを読み込む。
+runnable-hiero.jarをダブルクリックして、起動したHieroからYuMincho60bold.hieroを読み込む。このツールは非常に重たく、起動とファイルロードに時間がかかるので注意してください。
 ![img](2018-03-21_16h44_47.png)
 
 メニュー＞File＞Save BMFontで、ファイルを書き出す用に指示。時間はかかるが指定した場所にfntファイルとpngファイルが出来上がるのを待つ。
