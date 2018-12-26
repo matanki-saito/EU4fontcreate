@@ -2,13 +2,13 @@
 fileVersion=1
 
 # font settings
-fontName=ＭＳ 明朝
+fontName=Source Han Serif JP
 fontFile=
 charSet=0
-fontSize=16
+fontSize=21
 aa=1
 scaleH=100
-useSmoothing=0
+useSmoothing=1
 isBold=1
 isItalic=0
 useUnicode=1

@@ -15,6 +15,10 @@
 
 マップ用のフォントは上記とは別の方法で作られています。詳細はhieroフォルダにあるmemo.mdを参照してください。
 
+## 使用フォントについて
+ - [源ノ明朝](https://github.com/adobe-fonts/source-han-serif)
+ - [源ノ角ゴシック](https://github.com/adobe-fonts/source-han-sans)
+
 ## 注意点
 
 - CP1252の0x80から0x9Fまでに相当する文字（例えば€）はUCS2のコードポイントではなくて、CP1252のコードポイントとして作成されます。

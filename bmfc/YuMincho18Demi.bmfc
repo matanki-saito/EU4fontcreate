@@ -2,10 +2,10 @@
 fileVersion=1
 
 # font settings
-fontName=游明朝 Demibold
+fontName=Source Han Serif JP SemiBold
 fontFile=
 charSet=0
-fontSize=16
+fontSize=18
 aa=2
 scaleH=100
 useSmoothing=1
