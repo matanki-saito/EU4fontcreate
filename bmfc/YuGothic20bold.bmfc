@@ -2,10 +2,10 @@
 fileVersion=1
 
 # font settings
-fontName=游ゴシック
+fontName=Source Han Sans JP
 fontFile=
 charSet=0
-fontSize=20
+fontSize=21
 aa=2
 scaleH=100
 useSmoothing=1

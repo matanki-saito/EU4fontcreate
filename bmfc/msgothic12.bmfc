@@ -2,13 +2,13 @@
 fileVersion=1
 
 # font settings
-fontName=ＭＳ Ｐゴシック
+fontName=Source Han Sans JP
 fontFile=
 charSet=0
-fontSize=12
-aa=1
+fontSize=17
+aa=2
 scaleH=100
-useSmoothing=0
+useSmoothing=1
 isBold=0
 isItalic=0
 useUnicode=1
@@ -50,3 +50,6 @@ invB=0
 outlineThickness=0
 
 # selected chars
+
+
+# imported icon images
