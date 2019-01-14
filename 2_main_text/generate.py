@@ -5,7 +5,7 @@ import subprocess
 def generateBMFont(name,ext,addSourceFile=False):
     #コマンド
     cmdList  =[
-        'bmfont64.exe',
+        '../1_tool/bmfont64.exe',
         '-c',"./bmfc/" + name + ext,
         '-o',"./out/" + name + ".fnt"
     ];
@@ -51,10 +51,6 @@ def main():
         #拡張子がbmfcの時のみフォントを生成
         if(file_ext == ".bmfc"):
             generateBMFont(file_name,file_ext,"source.txt");
-
-        #拡張子が_bmfcの時のみフォントを生成
-        if(file_ext == "._bmfc"):
-            generateBMFont(file_name,file_ext);
 
 if __name__ == "__main__":
     # execute only if run as a script
