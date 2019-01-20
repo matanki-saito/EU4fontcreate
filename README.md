@@ -1,4 +1,4 @@
-# EU4fontcreate
+# EU4 fontcreate
 
 ## Overview
  - Steam配信されているWindows版Europa Universalis IVの日本語化パッチの副産物です。パッチはこのプログラムを使って作成されたフォントのみを受け付けます。
@@ -14,18 +14,15 @@
  - pillow ```pip install pillow```
 
 ### Usage
- 同梱しているbmfont64.exeを使用して、作成したいフォントのconfigurationファイル（.bmfc）をbmfcフォルダに保存してください。この時、含める文字は空にしてください。含めたい文字はsourceフォルダに任意の名前のBOM付きのUTF-8のtxtファイルに入れておきます。こちらで予めCP1252の追加文字と大体のSHIFT_JISの範囲の文字を入れたテキストを用意していますので、これ以外で必要な文字をtxtとして追加してください。
-
-マップフォントを作る場合はhieroフォルダにあるREADMEを参照してください。
-
- 準備が整ったら、generate.pyを実行します。outフォルダに生成されたフォントが入ります。
-
-マップ用のフォントは上記とは別の方法で作られています。詳細はhieroフォルダにあるmemo.mdを参照してください。
+ 1. 同梱している1_tool/bmfont64.exeを使用して、作成したいフォントのconfigurationファイル（.bmfc）を2_main_text/bmfcフォルダに保存してください。この時、含める文字は空にしてください。
+ 1. 含めたい文字を2_main_text/sourceフォルダに任意の名前のBOM付きのUTF-8のtxtファイルに入れておきます。こちらで予めCP1252の追加文字と大体のSHIFT_JISの範囲の文字を入れたテキストを用意していますので、これ以外で必要な文字をtxtとして追加してください。
+ 1. 準備が整ったら、2_main_text/generate.pyを実行します。2_main_text/outフォルダに生成されたフォントが入ります。
+ 1. 3_map_textについても同様に実施してください。
 
 ## create on cloud
-フォント生成を自動化しましょう。
+Automation.
 
-### GitHub
+### Prepare GitHub repository
 
 1. GitHubのアカウントを作ってください。
 1. このレポジトリをForkしてください。以下そのForkしてきたレポジトリに対して処理してください。
@@ -35,7 +32,7 @@
 1. 3_map_textについても同様にしてください。
 1. 以上の変更をレポジトリのmasterにpushしておいてください。
 
-### Azure Devopsの準備
+### Prepare Azure Devops 
 
 1. [Azure DevOps](https://azure.microsoft.com/ja-jp/services/devops/?&OCID=AID736753_SEM_kIccgsOt)の画面を開きます
 1. 無料で始めるをクリックしてください。Microsoftのアカウント作成が必要です。
@@ -46,7 +43,7 @@
 1. Select a sourceでGitHubを選び、上の方でGitHubにForkしたレポジトリを選んでください。この時、OAuth2の連携が必要になります。 
 1. Select a templateはEmptyほげほげリンクを選んでスキップしてください。
 
-### Pipelineの設定
+### Setting up the Pipeline
 Pipelineを作ります。この画面は最終的な完成品です。
 ![](resource/2019-01-14_20h19_28.png)
 ymlを載せますので頑張ってそれっぽく作ってください。
@@ -166,7 +163,7 @@ steps:
  - git LFSを有効にするチェックが入っているか
  - HostはVS2017か
 
-### 変数とクレデンシャルの設定
+### Setting variables and credentials
 ファイル名やGitHubに成果物を送信するときのアクセスキーなどを登録します。Taskタブの右にVariablesがあるので、ここで下記のように設定してください。
 
 ![](resource/2019-01-14_20h36_53.png)
@@ -175,10 +172,10 @@ steps:
  - python.version: pythonのバージョン
  - token: GitHubのアクセストークン（ここで作ってください：https://github.com/settings/tokens）
 
-### 実行
+### Que and run
 Pipelineをキューに入れて実行を待ちます。処理がうまくいくと、Githubのアセットに生成されたファイルが飛んできます。
 
-### トリガー
+### Trigger
 処理のトリガーはmasterの修正などにすると良いと思います。
 
 ## Licence
