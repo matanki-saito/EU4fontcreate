@@ -39,6 +39,10 @@ def main():
 
     #source textを作成
     f = open('source.txt','w',encoding='utf_8_sig');
+
+    # 逆疑問符を削除
+    sourceText = sourceText.replace("¿", "");
+
     f.write(sourceText);
     f.close();                
 
