@@ -39,9 +39,21 @@ def main():
 
     #source textを作成
     f = open('source.txt','w',encoding='utf_8_sig');
-    f.write(sourceText);
-    f.close();                
 
+    validatedText="";
+    #BMP外の文字がないかチェック
+    for char in sourceText:
+        if char == "¿":
+            print("IGNORE: ¿");
+            continue;
+        if ord(char) > 0xFFFF:
+            print("IGNORE: codePoint=" + str(hex(ord(char))));
+            continue;
+        validatedText += char;
+
+    f.write(validatedText);
+    f.close(); 
+    
     #bmfcフォルダ内を走査
     files = os.listdir("./bmfc");
     for file in files:
