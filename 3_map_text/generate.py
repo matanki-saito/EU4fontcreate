@@ -71,12 +71,20 @@ def main():
         if(file_ext == ".txt"):
             sourceText = sourceText + readTextFile(file_name);
 
-    # 逆疑問符を削除
-    sourceText = sourceText.replace("¿", "");
+    validatedText="";
+    #BMP外の文字がないかチェック
+    for char in sourceText:
+        if char == "¿":
+            print("IGNORE: ¿");
+            continue;
+        if ord(char) > 0xFFFF:
+            print("IGNORE: codePoint=" + str(hex(ord(char))));
+            continue;
+        validatedText += char;
 
     #source textを作成
     f = open('source.txt','w',encoding='utf_8_sig');
-    f.write(sourceText);
+    f.write(validatedText);
     f.close();                
 
     #bmfcフォルダ内を走査
