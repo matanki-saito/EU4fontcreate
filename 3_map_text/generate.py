@@ -71,6 +71,9 @@ def main():
         if(file_ext == ".txt"):
             sourceText = sourceText + readTextFile(file_name);
 
+    # 逆疑問符を削除
+    sourceText = sourceText.replace("¿", "");
+
     #source textを作成
     f = open('source.txt','w',encoding='utf_8_sig');
     f.write(sourceText);
