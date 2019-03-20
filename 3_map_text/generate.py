@@ -22,7 +22,7 @@ def negeposi(name,ext):
     im_g = im_enh.filter(ImageFilter.GaussianBlur(radius=0.6))
 
     #上書き
-    im_g.save('./out/'  + name + ext, quality=100)
+    im_g.save('./out/'  + name + ".tga", quality=100)
 
 def convertPngToDds(name,ext):
     #コマンド
@@ -107,7 +107,7 @@ def main():
             negeposi(file_name, file_ext);
         
             # 変換
-            convertPngToDds(file_name, file_ext);
+            # convertPngToDds(file_name, file_ext);
 
 if __name__ == "__main__":
     # execute only if run as a script
