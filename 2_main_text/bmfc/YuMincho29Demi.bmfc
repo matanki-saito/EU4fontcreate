@@ -20,10 +20,10 @@ renderFromOutline=0
 useClearType=1
 
 # character alignment
-paddingDown=0
-paddingUp=0
-paddingRight=0
-paddingLeft=0
+paddingDown=1
+paddingUp=1
+paddingRight=1
+paddingLeft=1
 spacingHoriz=0
 spacingVert=0
 useFixedHeight=0
