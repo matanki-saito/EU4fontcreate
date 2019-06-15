@@ -20,18 +20,18 @@ renderFromOutline=0
 useClearType=1
 
 # character alignment
-paddingDown=0
-paddingUp=0
-paddingRight=0
-paddingLeft=0
+paddingDown=1
+paddingUp=1
+paddingRight=1
+paddingLeft=1
 spacingHoriz=0
 spacingVert=0
 useFixedHeight=0
 forceZero=0
 
 # output file
-outWidth=1200
-outHeight=1200
+outWidth=1280
+outHeight=1280
 outBitDepth=32
 fontDescFormat=0
 fourChnlPacked=0
