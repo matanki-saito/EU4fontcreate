@@ -1,0 +1,3 @@
+このnvcompress.exeは
+http://code.google.com/p/nvidia-texture-tools/issues/detail?id=128
+のBMPの読み込みをするコードを追加してwin32(nocuda)でコンパイルしなおしたものです
