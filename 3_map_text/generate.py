@@ -1,5 +1,6 @@
 import os
 import subprocess
+
 from PIL import Image, ImageFilter, ImageEnhance
 
 
@@ -22,7 +23,7 @@ def negeposi(name, ext):
     im_g = im_enh.filter(ImageFilter.GaussianBlur(radius=0.6))
 
     # 上書き
-    im_g.save('./out/' + name + ".tga", quality=100)
+    im_g.save('./out/' + name + ".negeposi.png", quality=100)
 
 
 def generate_bm_font(name, ext, add_source_file):
@@ -47,6 +48,19 @@ def read_text_file(name):
     text = f.read()
     f.close()
     return text
+
+
+def convert_png_to_dds(name, ext):
+    # コマンド
+    cmd_list = [
+        '../1_tool/nvcompress/nvcompress.exe',
+        '-rgb',
+        './out/' + name + ".negeposi" + ext,
+        './out/' + name + '.dds'
+    ]
+
+    # nvcompressを実行してpngからddsに変換。無圧縮
+    subprocess.call(" ".join(cmd_list))
 
 
 def main():
@@ -96,6 +110,9 @@ def main():
         if file_ext == ".png":
             # ネガポジ反転
             negeposi(file_name, file_ext)
+
+            # ddsに変換
+            convert_png_to_dds(file_name, file_ext)
 
 
 if __name__ == "__main__":
