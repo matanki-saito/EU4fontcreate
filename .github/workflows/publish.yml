@@ -45,6 +45,7 @@ jobs:
       - name: generate map fonts and copy to out directory
         run: |
           cd 3_map_text
+          New-Item out -ItemType Directory
           python generate.py
           cd out
           dir
@@ -55,6 +56,7 @@ jobs:
       - name: generate maintext fonts and copy to out directory
         run: |
           cd 2_main_text
+          New-Item out -ItemType Directory
           python generate.py
           cd out
           dir
