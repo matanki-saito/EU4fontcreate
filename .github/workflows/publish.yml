@@ -36,6 +36,7 @@ jobs:
           ./Add-Font.ps1 -ExecutionPolicy unrestricted ./fonts/SourceHanSerifJP-SemiBold.otf
           add-type -AssemblyName system.drawing
           (New-Object System.Drawing.Text.InstalledFontCollection).Families
+        shell: powershell
       - name: make out directory
         run: New-Item font -ItemType Directory
         shell: powershell
@@ -46,7 +47,8 @@ jobs:
           cd out
           dir
           cd ../
-          Copy-Item out/* ../fonts
+          Copy-Item out/*.fnt ../fonts
+          Copy-Item out/*.dds ../font
         shell: powershell
       - name: generate maintext fonts and copy to out directory
         run: |
@@ -55,7 +57,8 @@ jobs:
           cd out
           dir
           cd ../
-          Copy-Item out/* ../font
+          Copy-Item out/*.fnt ../fonts
+          Copy-Item out/*.dds ../font
         shell: powershell
       - name: make zip
         run: Compress-Archive -Path ./fonts -DestinationPath ./default-font-set.zip
