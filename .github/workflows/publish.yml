@@ -40,7 +40,7 @@ jobs:
           (New-Object System.Drawing.Text.InstalledFontCollection).Families
         shell: powershell
       - name: make out directory
-        run: New-Item font -ItemType Directory
+        run: New-Item fonts -ItemType Directory
         shell: powershell
       - name: generate map fonts and copy to out directory
         run: |
